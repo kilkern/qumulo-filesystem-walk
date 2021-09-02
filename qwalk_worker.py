@@ -18,6 +18,7 @@ from qtasks.ApplyAcls import ApplyAcls
 # Import all defined classes
 from qtasks.ChangeExtension import ChangeExtension
 from qtasks.CopyDirectory import CopyDirectory
+from qtasks.CopyDirDates import CopyDirDates
 from qtasks.DataReductionTest import DataReductionTest
 from qtasks.ModeBitsChecker import ModeBitsChecker
 from qtasks.Search import Search
@@ -33,6 +34,7 @@ QTASKS: Mapping[str, Type[Task]] = {
     "SummarizeOwners": SummarizeOwners,
     "ApplyAcls": ApplyAcls,
     "CopyDirectory": CopyDirectory,
+    "CopyDirDates": CopyDirDates,
 }
 
 

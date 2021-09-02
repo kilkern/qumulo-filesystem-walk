@@ -194,6 +194,14 @@ python qwalk.py -s the.qumulo -d /original-snapped-dir --snap 55123 -c CopyDirec
 This will copy all items within the specified start directory `-d` and within the specified snapshot to the destination directory `--to_dir`.
 
 
+### Restore Directory Change and Modify Time stamps after CopyDirectory.
+
+In some instances, the CopyDirectory process can leave some directories with a newer change/modification time - if the dates on these are important to be restored correctly, then please run the below command:
+
+```
+python qwalk.py -s the.qumulo -d /original-snapped-dir --snap 55123 -c CopyDirDates --to_dir /test-full-copy-from-snap
+```
+
 ## Parameters, knobs, tweaks, mostly for working on Windows
 
 * **QBATCHSIZE** - Batch size of files and directories processed by the qtask jobs (default: 100)
